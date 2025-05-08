@@ -37,6 +37,7 @@ export default async function News() {
 		"web",
 		"engenharia",
 	]
+
 	return (
 		<div className="py-16 max-xl:px-4">
 			<header>

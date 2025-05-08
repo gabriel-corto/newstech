@@ -1,4 +1,5 @@
 "use client"
+
 import { MenuItem } from "@headlessui/react"
 import { LogOutIcon } from "lucide-react"
 import { signOut } from "next-auth/react"
@@ -7,8 +8,8 @@ import { toast } from "sonner"
 export function SignOutButton() {
 	async function handleSignOut() {
 		try {
-			await signOut({ callbackUrl: "/sign-in" })
-			toast.info("Sessão Terminada!")
+			await signOut({ callbackUrl: "/auth" })
+			toast.warning("Sessão Terminada!")
 		} catch {
 			toast.error("Erro ao terminar sessão!")
 		}

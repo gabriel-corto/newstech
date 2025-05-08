@@ -11,10 +11,18 @@ export function AccountMenu() {
 
 	return (
 		<Menu>
-			<MenuButton className="flex items-center cursor-pointer hover:scale-105 duration-300 justify-center  rounded-full">
-				<div className="w-12 h-12 flex items-center cursor-pointer hover:scale-105 duration-300 justify-center bg-neutral-800 rounded-full">
-					{data?.user?.image && (
-						<Image src={data.user.image} width={100} height={100} alt="" />
+			<MenuButton className="flex items-center cursor-pointer hover:scale-105 duration-300 justify-center rounded-full">
+				<div className="w-12 h-12 flex items-center cursor-pointer hover:scale-105 duration-300 justify-center rounded-full">
+					{data?.user?.image ? (
+						<Image
+							src={data.user.image}
+							width={100}
+							height={100}
+							alt=""
+							className="rounded-full"
+						/>
+					) : (
+						<div className="h-12 w-12 rounded-full bg-neutral-700 animate-pulse"></div>
 					)}
 				</div>
 			</MenuButton>

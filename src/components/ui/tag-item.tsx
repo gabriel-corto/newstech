@@ -4,10 +4,9 @@ import { useState } from "react"
 
 interface TagItemProps {
 	text: string
+	touchble?: boolean
 	size: "small" | "large"
 	variant: "primary" | "secondary"
-
-	touchble?: boolean
 }
 
 export function TagItem({ size, text, variant, touchble }: TagItemProps) {

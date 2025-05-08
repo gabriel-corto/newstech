@@ -3,10 +3,11 @@ import { Sora } from "next/font/google"
 
 import "@/css/globals.css"
 import { Header } from "@/components/layout/header"
-import { getServerSession } from "next-auth"
-import { redirect } from "next/navigation"
-import { SessionProvider } from "next-auth/react"
+
 import { Providers } from "../providers"
+import { redirect } from "next/navigation"
+
+import { getServerSession } from "next-auth"
 
 const sora = Sora({
 	subsets: ["latin"],
@@ -30,7 +31,7 @@ export default async function AppLayout({
 	const session = await getServerSession()
 
 	if (!session) {
-		redirect("/sign-in")
+		redirect("/auth")
 	}
 
 	return (

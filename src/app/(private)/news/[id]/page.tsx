@@ -36,7 +36,6 @@ export default async function Details({ params }: DetailsProps) {
 			return <div>Nenhuma notícia encontrada</div>
 		}
 	} catch (error) {
-		console.error("Erro ao buscar notícias:", error)
 		return <div>Erro ao carregar as notícias</div>
 	}
 
