@@ -9,6 +9,8 @@ import Image from "next/image"
 export function AccountMenu() {
 	const { data } = useSession()
 
+	console.log(data)
+
 	return (
 		<Menu>
 			<MenuButton className="flex items-center cursor-pointer hover:scale-105 duration-300 justify-center rounded-full">
